@@ -1,0 +1,36 @@
+.viewport{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include xs{
+    padding: 10px 10px 80px;
+    display: block;
+    overflow: auto;
+  }
+  .screen{
+    min-width: 30vw;
+    flex-grow: 1;
+    padding: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+    @include md{
+      min-width: 70vw;
+    }
+    @include xs{
+      min-width: 100%;
+      min-height: 270px;
+    }
+    .video{
+      flex: 1;
+      background: rgba(0,0,0,0.3);
+      position: relative;
+    }
+  }
+}
