@@ -1,5 +1,16 @@
 $(function () {
-  chat.init()
+  chat.init();
+  $.notify.defaults({
+    autoHide: false,
+    showAnimation: 'fadeIn',
+    hideAnimation: 'fadeOut'
+  });
+  $.notify.addStyle('sco',{
+    html: "<div><div class=\"content\">\n"+
+          "<h1 data-notify-text=\"title\"></h1>"+
+          "<p data-notify-text=\"message\"></p>"+
+          "</div></div>",
+  })
 });
 
 const chat = {
@@ -18,6 +29,10 @@ const chat = {
       e.preventDefault();
       if (root.state) root.closeChat();
       else root.openChat();
+      $.notify({
+        title: 'Could not start screensharing',
+        message: 'The browser is having trouble accessing your screen.'
+      }, {style: 'sco', className: 'camera'});
     });
   },
   openChat: function () {

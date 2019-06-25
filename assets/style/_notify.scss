@@ -1,0 +1,50 @@
+.notifyjs-corner{
+  margin: 30px 30px 5px 5px !important;
+  @include xs{
+    margin: 5px !important;
+  }
+}
+.notifyjs-container{
+  max-width: 450px;
+  -webkit-touch-callout: none;
+  touch-callout: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 10px;
+  .notifyjs-sco-base{
+    border-radius: 3px;
+    padding: 16px;
+    display: flex;
+    background: #fafafa;
+    color: rgba(0,0,0,.87);
+    pointer-events: all;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 15px 40px -5px;
+    cursor: pointer;
+    .content{
+      padding: 0 16px;
+      width: calc(100% - 30px);
+      h1,p{
+        width: 100%;
+        display: block;
+        font-size: 14px;
+        line-height: 1.5em;
+        margin: 0;
+      }
+      h1{
+        font-weight: bold;
+      }
+      p{
+        line-height: 1;
+      }
+    }
+    &.notifyjs-sco-camera{
+      &:before{
+        content: '\e902';
+        font-family: 'scoutfix';
+        font-size: 37px;
+      }
+    }
+  }
+}
