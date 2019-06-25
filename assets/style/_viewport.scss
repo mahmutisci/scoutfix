@@ -7,8 +7,7 @@
   justify-content: center;
   @include xs{
     padding: 10px 10px 80px;
-    display: block;
-    overflow: auto;
+    flex-direction: row;
   }
   .screen{
     min-width: 30vw;
@@ -20,17 +19,37 @@
     flex: 1;
     align-content: center;
     justify-content: center;
+    transition: all ease-in-out 300ms;
     @include md{
       min-width: 70vw;
     }
     @include xs{
-      min-width: 100%;
-      min-height: 270px;
+      min-width: 50%;
+      width: 50%;
+      &:first-child{
+        min-width: 100%;
+      }
     }
     .video{
       flex: 1;
       background: rgba(0,0,0,0.3);
       position: relative;
+      transition: all ease-in-out 300ms;
+      .OT_widget-container{
+        background: transparent;
+        video{
+          object-fit: contain;
+        }
+      }
+      &.full-width{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background: #000;
+      }
     }
   }
 }
