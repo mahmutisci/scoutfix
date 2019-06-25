@@ -24,6 +24,9 @@
       a{
         text-decoration: none;
         color: #fff;
+        &.close{
+          color: #ff3838;
+        }
         &[class*='active']{
           i{
             position: relative;
