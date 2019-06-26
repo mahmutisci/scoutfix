@@ -47,3 +47,22 @@ body{
     height: 100%;
   }
 }
+
+
+.chat-single-wrap{
+  width: 100vw;
+  height: 100vh;
+  .chat{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 44px -4px rgba(0, 0, 0, 0.21);
+    &-header{
+      display: none;
+    }
+  }
+}
