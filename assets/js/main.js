@@ -111,6 +111,7 @@ const fullWidth = {
 //   let message = [
 //     { className: className, name: 'Mahmut', text: event.data },
 //   ].map(messageTemplate).join('');
+//   message = $(message);
 //   msgHistory.append(message);
-//   msgHistory.scrollIntoView();
+//   message[0].scrollIntoView();
 // });
